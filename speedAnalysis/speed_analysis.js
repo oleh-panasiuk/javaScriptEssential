@@ -3,6 +3,7 @@ let startTime, endTime;
 
 function startTest() {
     // Set the test text
+    document.getElementById("userInput").readOnly = false;
     document.getElementById("inputText").value = testText;
     // Reset results and timer
     document.getElementById("output").innerHTML = "";
@@ -33,7 +34,8 @@ function startTest() {
                 outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" +
                     "<p>Words Typed: " + typedWords + "</p>" +
                     "<p>Time Elapsed: " + timeElapsed.toFixed(2) + " seconds</p>" +
-                    "<p>Words Per Minute (WPM): " + wpm + "</p>";
+                    "<p>Words Per Minute (WPM): " + wpm + "</p>" +
+                    "<p>Total length: " + userTypedText.length + "</p>"
                 // Reset the button
                 var button = document.getElementById("btn");
                 button.innerHTML = "Start Test";
